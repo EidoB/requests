@@ -20,11 +20,10 @@ pipeline {
     }
     post {
         success{
-            echo 'test success'
+           app = docker.build("testingpython/tesstingpy")
         }
     }
 }
-
 
 
 
