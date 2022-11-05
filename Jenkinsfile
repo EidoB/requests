@@ -20,7 +20,7 @@ pipeline {
     }
     post {
         success{
-           app = docker.build("testingpython/tesstingpy")
+           docker.build("testingpython/tesstingpy")
         }
     }
 }
