@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'python http_e.py'
+                sh 'python3 http_e.py'
             }
         }
         stage('Test') {
             steps {
-                sh 'python TestRest.py '
+                sh 'python3 TestRest.py '
             }
         }
     }
