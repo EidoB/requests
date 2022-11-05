@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git https://github.com/EidoB/requests.git
+                echo 'git'
             }
         }
         stage('Build') {
