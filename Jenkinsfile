@@ -17,9 +17,9 @@ pipeline {
                 sh 'python3 TestRest.py '
             }
         }
-        stage('Build Docker Image') {
+        stage('Create Image') {
             steps {
-                agent { dockerfile true }
+                sh 'docker build -t testingpython . '
             }
         }
     }
