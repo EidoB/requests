@@ -20,7 +20,7 @@ pipeline {
     }
     post {
         success{
-           docker.build("testingpython/tesstingpy")
+           echo 'docker build katalk'
         }
     }
 }
