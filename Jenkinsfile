@@ -19,9 +19,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                script{
-                    app = docker.Build('Testmodule')
-                }
+                agent { dockerfile true }
             }
         }
     }
