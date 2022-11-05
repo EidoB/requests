@@ -17,5 +17,12 @@ pipeline {
                 sh 'python3 TestRest.py '
             }
         }
+        stage('Build Docker Image') {
+            steps {
+                script{
+                    app = docker.Build('Testmodule')
+                }
+            }
+        }
     }
 }
