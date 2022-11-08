@@ -1,10 +1,11 @@
+
 pipeline {
     agent any
 
     stages {
         stage('clone') {
             steps {
-                sh 'git clone https://github.com/EidoB/requests.git'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/EidoB/requests.git']]])
             }
         }
         stage('Build') {
@@ -24,6 +25,3 @@ pipeline {
         }
     }
 }
-
-
-
