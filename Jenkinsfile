@@ -21,7 +21,7 @@ pipeline {
     }
     post {
         success{
-           echo 'docker build katalk'
+           sh 'docker build -t hotipythontest .'
         }
     }
 }
