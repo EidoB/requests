@@ -6,4 +6,4 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD ["python" , "http_e.py"]
+CMD ["python3" , "http_e.py"]
