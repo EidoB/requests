@@ -21,7 +21,7 @@ pipeline {
     }
     post {
         success{
-           sh 'docker build -t hotipythontest .'
+           sh 'sudo docker build -t hotipythontest .'
         }
     }
 }
